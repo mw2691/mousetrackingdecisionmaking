@@ -95,9 +95,9 @@ try
     screenNumber = max(screenVector);
     %use for experiment:
     [mainWindow, windowRect] = Screen('OpenWindow', screenNumber,1);
-    Priority(MaxPriority(mainWindow));
     %use for debugging (if only one monitor is available):
     %[mainWindow, windowRect] = Screen('OpenWindow', screenNumber,1, [0 0 640 480]);
+    Priority(MaxPriority(mainWindow));
     [xCenter, yCenter] = RectCenter(windowRect);
     [screenXpixels, screenYpixels] = Screen('WindowSize', mainWindow);
     
