@@ -6,7 +6,7 @@
 %
 %The experiment examines the kinematic profile of a decision-making process. 
 %This is achieved through the recording of the mouse trajectory pathway. 
-%In every trial the participants have to answer either a visual or auditory presented question. 
+%In each trial, participants have to answer a question that is presented either visually or auditive. 
 %Two answer buttons (yes and no) are presented in the upper-left and right. 
 %Each question belongs to one of three categories (clear yes question, question with no clear yes or no answer, clear no question).
 %Task: participants have to press one of the buttons after they have heard or seen the question.
@@ -170,7 +170,8 @@ try
     % 5. RUN EXPERIMENT  %
     %--------------------%
     
-    for trial = 1:experimentalTrials
+    %for trial = 1:experimentalTrials
+    for trial = 1:6
     
         %Present StartButton
         Screen('FrameRect', mainWindow, whiteColorForAllVisualElements, rectangleBottom);
@@ -251,8 +252,8 @@ try
             %0.1s for realistic behavior and sets the
             %bool answerButtonPressed to true
             if (insideLeftRect || insideRightRect) && any(buttons)
-                Screen('Flip', mainWindow);
                 WaitSecs(0.1);
+                Screen('Flip', mainWindow);
                 answerButtonPressed = 1;
             end
             %if no WaitSecs is used, the while loop would write to many

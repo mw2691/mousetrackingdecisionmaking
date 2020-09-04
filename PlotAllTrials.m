@@ -2,6 +2,8 @@
 % Function relates to experiment MouseDecisionTrackingExperimentMainCode.m
 % Markus Wieland August 2020
 function PlotAllTrials(participantID)
+%This function plots all trials with the values from the result file
+%Param: participantID is the number of the desired participant 
 
 %Read resultfile as tables and convert to matrix
 fileName = 'MouseDecTracking';
