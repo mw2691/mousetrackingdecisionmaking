@@ -13,7 +13,9 @@ function QuestionOrderForTrial = OrderQuestionsInTrialOrder(presentationOrder, q
 
 
 %Read in the visual and auditory questions
-visualQuestions = ReturnMatrixWithVisualQuestions('VisualQuestions.txt');
+visualQuestionsName = 'VisualQuestions';
+visualQuestionsFileName= [visualQuestionsName '.txt'];
+visualQuestions = ReturnMatrixWithVisualQuestions(visualQuestionsFileName);
 auditiveQuestionsCellArray = ReturnCellArrayWithAuditiveQuestions();
 
 %Preallocate the return cell array with the order of the questions
