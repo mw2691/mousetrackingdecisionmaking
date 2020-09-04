@@ -170,8 +170,7 @@ try
     % 5. RUN EXPERIMENT  %
     %--------------------%
     
-    %for trial = 1:experimentalTrials
-    for trial = 1:6
+    for trial = 1:experimentalTrials
     
         %Present StartButton
         Screen('FrameRect', mainWindow, whiteColorForAllVisualElements, rectangleBottom);
